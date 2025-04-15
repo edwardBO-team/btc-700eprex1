@@ -1,0 +1,44 @@
+.sdk-privacy-btn,
+.sdk-terms-btn {
+    display: inline;
+    font-weight: 600;
+}
+
+.iti {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+form .iti .iti__selected-dial-code,
+.iti--separate-dial-code .iti__selected-dial-code {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+input[type="checkbox"] {
+    height: auto;
+    width: unset;
+    min-width: unset;
+}
+
+.iti__selected-dial-code {
+    color: #58468c;
+}
+
+.sdk-login-button {
+    display: block;
+    min-width: 100%;
+    margin-top: 20px;
+    padding-block: 16px;
+    height: 48px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background: #ff61eb;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+

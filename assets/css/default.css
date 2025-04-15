@@ -1,0 +1,729 @@
+@import url("all.min.css");
+@import url("css2-1.css");
+
+form {
+  font-size: 14px;
+}
+
+form .form-group {
+  position: relative;
+}
+
+
+form .default-input {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 1em;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition-property: border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out;
+  transition-delay: 0, 0;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+form input.form-control:focus {
+  box-shadow: none;
+}
+
+form .iti {
+  display: block;
+}
+
+form .iti .iti__selected-dial-code {
+  font-size: 1em;
+}
+
+form .button-gen-password {
+  display: block;
+  height: 40px;
+  width: 100%;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  background-color: blue;
+  font-size: 1em;
+}
+
+form .button-gen-password:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+form .button-gen-password:focus {
+  outline: 0;
+}
+
+.sdk-prom-checkbox {
+  display: flex;
+  align-items: baseline;
+}
+
+.sdk-checkbox-text {
+  font-size: 12px;
+  line-height: 15px;
+  margin-left: 7px;
+  margin-top: 5px;
+  color: initial;
+}
+
+.sdk-prom-checkbox input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+}
+
+.sdk-prom-checkbox input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 2px solid green;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.sdk-prom-checkbox input[type="checkbox"]:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid green;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;
+}
+
+.toggle-gen-password {
+  position: absolute;
+  right: 15px;
+  z-index: 1;
+  top: 50%;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #333;
+}
+
+html:lang(ar) .toggle-gen-password {
+  left: 15px;
+  right: auto;
+}
+
+.toggle-gen-password.is-active .before {
+  display: none;
+}
+
+.toggle-gen-password.is-active .after {
+  display: block;
+}
+
+form .sdk-hide-password {
+  display: none;
+}
+
+form input:not(:placeholder-shown) {
+  border-color: rgba(206, 212, 218, 0.5);
+}
+
+form input:valid:not(:placeholder-shown) {
+  padding-right: 34px;
+  border-color: #249e2c;
+}
+
+form input:invalid:not(:placeholder-shown),
+input.invalid-field {
+  border-color: #eb172b !important;
+}
+
+form input:valid:not(:placeholder-shown) ~ .icon:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  color: #249e2c;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+html:lang(ar) form input:valid:not(:placeholder-shown) ~ .icon:after,
+html:lang(ar) form input:valid:not(:placeholder-shown) ~ .icon:after,
+html:lang(ar) form input:valid:not(:placeholder-shown) ~ .icon:after {
+  left: 15px;
+  right: auto;
+}
+
+form input:valid:not(:placeholder-shown) ~ .iti__selected-flag,
+form input:valid:not(:placeholder-shown) ~ .iti__selected-flag,
+form input:valid:not(:placeholder-shown) ~ .iti__selected-flag {
+  font-size: 20px;
+}
+
+.sdk-load-complete {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 99999999;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+#sdk-modal-default {
+  font-family: "Mulish", sans-serif;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(246, 246, 246, 0.8);
+  z-index: 99999999;
+  overflow: auto;
+}
+
+#sdk-modal-default .sdk-modal-wrapper {
+  background-color: #6e6e6e;
+  margin: 0;
+  height: auto;
+  max-width: 500px;
+  padding: 30px 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  border: 2px solid #f6f6f6;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 6px 10px 4px rgb(0 0 0 / 40%);
+  box-shadow: 0 6px 10px 3px rgb(0 0 0 / 40%);
+}
+
+#sdk-modal-default .sdk-modal-haf {
+  background-color: #fff;
+  margin: 0;
+  height: auto;
+  max-width: 500px;
+  padding: 30px 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  border: 1px solid #c7c6c6;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 3px 9px 3px rgb(0 0 0 / 30%);
+  box-shadow: 0 3px 9px 3px rgb(0 0 0 / 30%);
+}
+
+#sdk-modal-default .sdk-modal-haf .check-ic {
+  display: block;
+  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid rgba(36, 158, 44, 0.3);
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#sdk-modal-default .sdk-modal-haf i {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 40px;
+  color: #4fb156;
+}
+
+#sdk-modal-default .sdk-modal-haf h3.haf-title {
+  font-size: 16px;
+  line-height: 1.24;
+  font-weight: 300;
+  text-align: center;
+  color: #252525;
+  margin-bottom: 10px;
+}
+
+#sdk-modal-default .sdk-text-center {
+  text-align: center;
+}
+
+#sdk-modal-default .sdk-modal-wrapper h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+#sdk-modal-default .sdk-modal-wrapper h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  margin: 10px 0 20px;
+}
+
+#sdk-modal-default .sdk-modal-wrapper h5 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffbe00;
+  margin: 0 0 7px;
+}
+
+#sdk-modal-default .sdk-modal-wrapper p {
+  font-size: 14px;
+  line-height: 1.25;
+  margin: 0;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+#sdk-modal-default .sdk-brand-logo {
+  display: block;
+  width: 250px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+#sdk-modal-default .sdk-feature {
+  margin-bottom: 25px;
+  padding-left: 45px;
+  background-size: auto 35px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+#sdk-modal-default .sdk-icon1 {
+  background-image: url("../img/security.svg");
+}
+
+#sdk-modal-default .sdk-icon2 {
+  background-image: url("../img/bonus.svg");
+}
+
+#sdk-modal-default .sdk-feature.sdk-icon3 {
+  background-image: url("../img/profit.svg");
+  margin-bottom: 40px;
+}
+
+#sdk-modal-default .sdk-button {
+  display: block;
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: #ffbe00;
+  color: #000;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  max-width: 500px;
+  margin: auto 0;
+  font-weight: 700;
+}
+
+#sdk-modal-default .sdk-button:hover {
+  background-color: #f8c427;
+}
+
+@media (max-width: 991px) {
+  #sdk-modal-default .sdk-modal-wrapper {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #sdk-modal-default .sdk-modal-wrapper {
+    top: 10%;
+    left: 15%;
+    transform: initial;
+    max-width: 70%;
+  }
+
+  #sdk-modal-default .sdk-modal-haf {
+    padding: 24px;
+  }
+
+  #sdk-modal-default .sdk-modal-haf .check-ic {
+    width: 60px;
+    height: 60px;
+  }
+
+  #sdk-modal-default .sdk-modal-haf i {
+    top: 7px;
+    left: 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  #sdk-modal-default .sdk-modal-wrapper {
+    top: 5%;
+    left: 5%;
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  #sdk-modal-default .sdk-brand-logo {
+    width: 200px;
+  }
+
+  #sdk-modal-default .sdk-modal-wrapper h3 {
+    font-size: 24px;
+  }
+
+  #sdk-modal-default .sdk-modal-wrapper h5 {
+    font-size: 16px;
+  }
+
+  #sdk-modal-default .sdk-modal-wrapper p {
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  #sdk-modal-default .sdk-feature {
+    background-size: auto 32px;
+    padding-left: 40px;
+    margin-bottom: 18px;
+  }
+
+  #sdk-modal-default .sdk-button {
+    font-size: 18px;
+    line-height: 20px;
+    padding: 12px;
+  }
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive embed,
+.embed-responsive iframe,
+.embed-responsive object,
+.embed-responsive video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.sdk-full-date {
+  position: absolute;
+  right: auto;
+  left: 20px;
+  top: 10px;
+  z-index: 15;
+  color: #fff;
+}
+
+.sdk-full-date.right {
+  right: 20px;
+  left: auto;
+}
+
+.sdk-form-errors p {
+  color: #000;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffdede;
+  border-radius: 5px;
+}
+
+.hidepassword {
+  display: none;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.video iframe {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.video.stuck {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 260px;
+  height: 145px;
+  transform: translateY(100%);
+  animation: fade-in-up 0.75s ease forwards;
+  z-index: 100;
+  padding-bottom: 0;
+}
+
+/* Modals styling */
+div.sdk-privacy-modal,
+div.sdk-terms-modal {
+  display: none;
+  position: fixed;
+  z-index: 1111111;
+  padding-top: 10px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+div.sdk-privacy-modal-content,
+div.sdk-terms-modal-content {
+  max-width: 1200px;
+  background-color: #fefefe;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 88%;
+  height: 95%;
+  overflow-y: auto;
+  text-align: left;
+}
+
+/* Custom modal scrollbar */
+.sdk-privacy-modal-content::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.sdk-privacy-modal-content::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.sdk-privacy-modal-content::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgb(186, 177, 177);
+}
+
+.sdk-terms-modal-content::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.sdk-terms-modal-content::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.sdk-terms-modal-content::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgb(186, 177, 177);
+}
+
+a.sdk-privacy-btn,
+a.sdk-terms-btn {
+  cursor: pointer !important;
+  text-decoration: underline !important;
+  color: inherit !important;
+}
+
+span.sdk-modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+span.sdk-modal-close:hover,
+span.sdk-modal-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+div.sdk-modal-container {
+  padding: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1.2rem;
+  color: #000;
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  div.sdk-modal-container {
+    padding: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1rem;
+    color: #000;
+  }
+}
+
+h1.sdk-modal-header {
+  font-size: 2.2rem !important;
+  color: #000 !important;
+  text-align: center !important;
+}
+
+p.sdk-modal-subheader {
+  text-align: center;
+}
+
+p.sdk-modal-paragraph {
+  color: #000 !important;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2.sdk-h2,
+h3.sdk-h3 {
+  font-size: 2.2rem;
+}
+
+table.sdk-modal-table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+}
+
+table.sdk-modal-table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+table.sdk-modal-table-bordered thead td,
+table.sdk-modal-table-bordered thead th {
+  border-bottom-width: 2px;
+}
+
+table.sdk-modal-table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+table.sdk-modal-table-bordered td,
+table.table-bordered th {
+  border: 1px solid #dee2e6;
+}
+
+table.sdk-modal-table-bordered thead td,
+table.sdk-modal-table-bordered thead th {
+  border-bottom-width: 2px;
+}
+
+table.sdk-modal-table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+table.sdk-modal-table-bordered td,
+table.sdk-modal-table-bordered th {
+  border: 1px solid #dee2e6;
+}
+
+table.sdk-modal-table td,
+table.sdk-modal-table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Cookies Bar*/
+div.sdk-cookies {
+  width: 100%;
+  position: fixed;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 16px;
+  box-sizing: border-box;
+  z-index: 999997;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+  bottom: 0;
+}
+
+p.sdk-cookie-text {
+  font-size: 12px;
+  color: #000;
+  text-align: left;
+  margin: 0;
+}
+button.sdk-cookies-btn {
+  display: block;
+  min-width: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+  line-height: 36px;
+  border: none;
+  font-size: 16px;
+  transition: box-shadow 0.3s;
+  font-weight: bold;
+  color: #fff;
+  background-color: #115cfa;
+  margin-left: 15px;
+}
+@media only screen and (max-width: 662px) {
+  div.sdk-cookies {
+    flex-direction: column;
+  }
+  button.sdk-cookies-btn {
+    margin-top: 10px;
+  }
+}
+button.sdk-cookies-btn:hover {
+  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 30%);
+  transform: translate3d(0, -1px, 0);
+}
+
+div.sdk-privacy-modal-content,
+div.sdk-terms-modal-content {
+  max-width: 1200px;
+}
+
+html:lang(ar) .sdk-privacy-modal,
+.sdk-terms-modal {
+  direction: ltr;
+}
+
+button.sdk-cookies-btn.reject {
+  background-color: transparent;
+  color: #000;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 30%);
+}
+
+div.sdk-cookie-buttons {
+  display: flex;
+}
